@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    background-color: wheat;
+    align-items: center; /* Center aligns flex children (the img, table, and button) */
+    justify-content: start; /* Aligns flex children to the start of the flex container */
+    width: 50%;
+    max-width: 600px; /* You can set a max-width to avoid the box becoming too large */
+    margin: auto; /* Centers the .box in the .main flex container */
+    padding: 20px; /* Adds some padding inside the .box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow to the box */
+}
+
+img {
+    max-width: 100%; /* Ensures the image is not larger than its container */
+    height: auto; /* Keeps the image aspect ratio */
+}
+
+.btn {
+    margin-top: 20px; /* Adds space between the table and the button */
+}
+
+table {
+    width: 100%; /* Table width is the full width of its container */
+    margin-top: 20px; /* Adds space between the image and the table */
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+</style>
+
+<script src="../../jquery-3.7.1.min.js"></script>
+<script type="text/javascript" language="javascript">
+
+$(document).ready(function(){
+    $(".btn").click(function(){
+        $(".main").animate({left:"-350px"},"slow")
+        alert("Hi")
+    })
+})
+    
+
+</script>
+
+<body>
+    <div class="main">
+
+        <div class="box" >
+
+            <img src="./image.jpg" alt="">
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>SR NO</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Sujeet</td>
+                        <td>Amberkar</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Manali</td>
+                        <td>Amberkar</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sanjay</td>
+                        <td>Amberkar</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <div class="btn">
+                 <input type="button" value="Click Me">
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<style>
+
+</style>
+
+<script>
+    $(document).ready(function(){
+        $("#calculateBtn").click(function(event){
+            event.preventDefault(); // Prevent the default form submission
+            let var1 = parseFloat($("#num1").val()); // Added parentheses
+            let var2 = parseFloat($("#num2").val()); // Added parentheses
+            let operation = $("input[name='operation']:checked").val(); // Get selected operation
+            let result = 0;
+
+            switch(operation) {
+                case 'addition':
+                    result = var1 + var2;
+                    break;
+                case 'subtraction':
+                    result = var1 - var2;
+                    break;
+                case 'multiplication':
+                    result = var1 * var2;
+                    break;
+                default:
+                    result = "Please select an operation";
+            }
+
+            $("#result").val(result); // Display the result
+        });
+    });
+
+</script>
+
+
+<body>
+    <div class="f">
+        <form action="">
+            <label for="num1"> Enter a number: </label>
+            <input type="text" id="num1" name="num1" placeholder="5">
+            <br>
+            <label for="num2"> Enter a number: </label>
+            <input type="text" id="num2" name="num2" placeholder="3">
+            <br>
+            <label for="operation">Select the Mathemateical Opperation</label>
+
+    <input type="radio" name="operation" value="addition" id="addition"> Addition
+    <input type="radio" name="operation" value="subtraction" id="subtraction"> Subtraction
+    <input type="radio" name="operation" value="multiplication" id="multiplication"> Multiplication
+            <br> 
+            <input type="text" id="result" placeholder="Result" readonly>
+
+            <div class="btn">
+                <button id="calculateBtn">Calculate</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
