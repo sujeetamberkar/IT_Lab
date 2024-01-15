@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Carousel with Table</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-4">
+    <!-- Bootstrap Carousel -->
+    <div id="tableCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+
+            <!-- First slide with a table -->
+            <div class="carousel-item active">
+              <table class=" centered table table-dark" border="solid" >
+                <thead>
+                      <tr>
+                        <th>Day/Time</th>
+                        <th>8:00-9:00</th>
+                        <th>9:00-10:00</th>
+                        <th>10:00-10:30</th>
+                        <th>10:30-11:30</th>
+                        <th>11:30-12:30</th>
+                        <th>12:30-1</th>
+                        <th>1:00-2:00</th>
+                        <th>2:00-3:00</th>
+                        <th>3:00-3:30</th>
+                        <th>3:30-4:30</th>
+                      </tr>
+                </thead>
+            
+                <tbody>
+                  <tr>
+                    <td>Monday</td>
+                    <td>DS</td>
+                    <td></td>
+                    <td rowspan="6">Break</td>
+                    <td>EEFM</td>
+                    <td>OE</td>
+                    <td rowspan="6">Break</td>
+                    <td></td>
+                    <td colspan="3">DSL</td>
+                  </tr>
+                  <tr>
+                    <td>Tuesday</td>
+                    <td colspan="5"></td>
+                    <td>PCAP</td>
+                    <td>OE</td>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>IT Lab Lecture</td>
+                    <td>DS</td>
+                    <td>OE</td>
+                    <td>PCAP</td>
+                    <td></td>
+                    <td colspan="3">PPL</td>
+                  </tr>
+            
+                  <tr>
+                    <td>Thursday</td>
+                    <td colspan="5"></td>
+                    <td >DS</td>
+                    <td colspan="3"></td>
+                  </tr>
+            
+                  <tr>
+                    <td>Friday</td>
+                    <td colspan="2"></td>
+                    <td>PCAP</td>
+                    <td>EEFM</td>
+                    <td></td>
+                    <td colspan="3">IT Lab</td>
+                  </tr>
+            
+            
+                  <tr>
+                    <td>Saturday</td>
+                    <td colspan="5"></td>
+                    <td></td>
+                    <td>EEFM</td>
+                    <td></td>
+                    <td>DS</td>
+                  </tr>
+            
+            
+                </tbody>
+               </table>
+          
+            </div>
+
+            <!-- Second slide with another table -->
+            <div class="carousel-item">
+              <table class=" centered table table-dark   " border="solid">
+                <thead>
+                      <tr>
+                        <th>Day/Time</th>
+                        <th>8:00-9:00</th>
+                        <th>9:00-10:00</th>
+                        <th>10:00-10:30</th>
+                        <th>10:30-11:30</th>
+                        <th>11:30-12:30</th>
+                        <th>12:30-1</th>
+                        <th>1:00-2:00</th>
+                        <th>2:00-3:00</th>
+                        <th>3:00-3:30</th>
+                        <th>3:30-4:30</th>
+                      </tr>
+                </thead>
+            
+                <tbody>
+                  <tr>
+                    <td>Monday</td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="6">Break</td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="6">Break</td>
+                    <td></td>
+                    <td colspan="3">DSL</td>
+                  </tr>
+                  <tr>
+                    <td>Tuesday</td>
+                    <td colspan="5"></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td>Wednesday</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="3">PPL</td>
+                  </tr>
+            
+                  <tr>
+                    <td>Thursday</td>
+                    <td colspan="5"></td>
+                    <td ></td>
+                    <td colspan="3"></td>
+                  </tr>
+            
+                  <tr>
+                    <td>Friday</td>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="3">IT Lab</td>
+                  </tr>
+            
+            
+                  <tr>
+                    <td>Saturday</td>
+                    <td colspan="5"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+            
+            
+                </tbody>
+               </table>
+            </div>
+
+            <!-- More slides with tables or other content -->
+
+        </div>
+
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#tableCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#tableCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<!-- Include jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

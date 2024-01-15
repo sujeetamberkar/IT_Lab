@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divide Pages</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <style>
+    .top {
+      background-color: rgb(192, 238, 212);
+      height: 50vh;
+      width: 100vw;
+      display: flex; /* Changed to flexbox */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .top .image-container {
+      flex: 1; /* Adjust the flex value as needed */
+    }
+
+    .top .text-container {
+      flex: 1; /* Adjust the flex value as needed */
+      padding: 20px; /* Added padding for spacing */
+    }
+    .bottom {
+      display: flex;
+      width: 100vw;
+    }
+
+    .b1,
+    .b2,
+    .b3 {
+      flex: 1;
+      height: 50vh;
+    }
+
+    .b1 {
+      background-color: blanchedalmond;
+    }
+
+    .b2 {
+      background-color: rgb(242, 246, 3);
+    }
+
+    .b3 {
+      background-color: rgb(223, 186, 230);
+    }
+  </style>
+  <body>
+    <div class="container-fluid">
+      <div class="top">
+        <div class="image-container">
+          <img src="./Cake.png" alt="" />
+        </div>
+        <div class="text-container">
+          <h1>Sujeet Amberkar</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            numquam nisi delectus inventore, maxime harum tempora ipsam
+            doloremque illum beatae atque ab natus aperiam reiciendis obcaecati
+            nemo, magnam consectetur sit cumque ducimus quis eaque! Dolor sed
+            quis ducimus a alias esse tempora porro earum sapiente quam!
+            Voluptatem vitae eaque assumenda possimus illum explicabo iusto quam
+            voluptatibus quasi neque, ut deserunt voluptates commodi nemo, at
+            unde sunt rerum. Repudiandae illo neque dicta sit perspiciatis quae
+            aperiam accusamus, iusto possimus, delectus nobis, ipsam quaerat
+            quos. Natus dolorem corrupti voluptatem quam harum vitae, quaerat
+            commodi, ut doloremque libero voluptate hic! Corrupti, qui
+            praesentium!
+          </p>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div class="b1">
+          <h2>Title One</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
+            provident nulla dicta pariatur exercitationem, ipsam similique ab
+            quisquam sed iusto!.
+          </p>
+        </div>
+
+        <div class="b2">
+          <h2>Title Two</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quia
+            natus eius, corrupti aspernatur dolor nisi sed deserunt cum ex
+            soluta eligendi nihil necessitatibus, mollitia iure magni enim
+            commodi debitis..
+          </p>
+        </div>
+
+        <div class="b3">
+          <h2>Title Three</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed illum,
+            cumque earum doloribus voluptate odit itaque illo in ullam deserunt
+            eligendi consequatur, aut vero repellendus provident deleniti, nobis
+            porro. Provident!.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

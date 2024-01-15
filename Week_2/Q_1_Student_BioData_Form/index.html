@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<script>
+    $(document).ready(function() {
+        $("#submitBtn").click(function() {
+            var isComplete = true;
+            var formData = "";
+    
+            $("input[type='text'], input[type='number']").each(function() {
+                var value = $(this).val();
+                var name = $(this).attr('name');
+                if (value == "") {
+                    isComplete = false;
+                    return false;
+                }
+                formData += name + ": " + value + "\n";
+            });
+    
+            var radioGroups = ["idCard", "Certificate"];
+            $.each(radioGroups, function(index, name) {
+                if ($("input[name='" + name + "']:checked").length == 0) {
+                    isComplete = false;
+                    return false;
+                }
+                formData += name + ": " + $("input[name='" + name + "']:checked").val() + "\n";
+            });
+    
+            if ($("#favColorDown").val() == "") {
+                isComplete = false;
+            } else {
+                formData += "Fav Color: " + $("#favColorDown").val() + "\n";
+            }
+    
+            if ($("#confirmAgain").is(":checked")) {
+                formData += "Are you sure: Yes\n";
+            } else {
+                isComplete = false;
+            }
+    
+            if (!isComplete) {
+                alert("Incomplete information");
+            } else {
+                alert("Form Data:\n" + formData);
+            }
+        });
+    });
+    </script>
+    
+    
+<body>
+    <div class="container-fluid">
+
+    <h1>Student Bio Data Form</h1>
+
+    <form action="">
+        <label for="inputName">Enter Your Name: </label>
+        <input type="text" id = "Name" name="Name">
+        <br>
+        <label for="rollNumber">Enter Your Roll Number: </label>
+        <input type="number" name="rollNumber" id="rollNumber" min="1" max="70">
+    
+        <br>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th> Document</th>
+                    <th> Issue Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Id Card</td>
+                    <td>
+                        <input type="radio" name="idCard" id="idCard_yes" value="1">
+                        <label for="idCard_yes">Yes</label>
+                        <input type="radio" name="idCard" id="idCard_no" value="0">
+                        <label for="idCard_yes">No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Certificate</td>
+                    <td>
+                        <input type="radio" name="Certificate" id="Certificate_yes" value="1">
+                        <label for="Certificate_yes">Yes</label>
+                        <input type="radio" name="Certificate" id="Certificate_no" value="0">
+                        <label for="Certificate_yes">No</label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        
+        <label for="favColorDown">Fav Color</label>
+        <select name="favColorDown" id="favColorDown">
+            <option value="Red">Red</option>
+            <option value="Yello">Yellow</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+
+        </select>
+        <br>
+        <label for="confirmAgain">Are you sure ?</label>
+        <input type="checkbox" id="confirmAgain" name="confirmAgain" value="1">
+
+
+        <br>
+        <button type="button" id="submitBtn" class="btn btn-outline-dark">Submit</button>
+
+    </form>
+    </div>
+</body>
+
+</html>

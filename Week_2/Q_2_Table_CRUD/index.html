@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+</head>
+<script>
+    $(document).ready(function(){
+        $('#create').click(function(){
+            alert("Created Sucessfully")
+        });
+
+        $('#replace').click(function(){
+            alert("Replaced Sucessfully")
+        });
+
+        $('#update').click(function(){
+            alert("Updated Sucessfully")
+        });
+
+        $('#delete').click(function(){
+            alert("Deleted Sucessfully")
+        });
+    })
+</script>
+<body>
+
+    <div class="container-fluid">
+        <h1>Student Details</h1>
+
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                <th>SR NO</th>
+                <th>Name</th>
+                <th>Marks 1</th>
+                <th>Marks 2</th>
+                <th>Marks 3</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>56</td>
+                    <td>80</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Raj</td>
+                    <td>89</td>
+                    <td>50</td>
+                    <td>14</td>
+                </tr>                <tr>
+                    <td>3</td>
+                    <td>Rohit</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>88</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container-fluid">
+        <button type="button" class="btn btn-outline-secondary" id="create">Create</button>
+        <button type="button" class="btn btn-outline-success" id="replace">Replace</button>
+        <button type="button" class="btn btn-outline-info" id="update">Update</button>
+        <button type="button" class="btn btn-outline-warning" id="delete">Delete</button>
+    </div>
+</body>
+</html>
