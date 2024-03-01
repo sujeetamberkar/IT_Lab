@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magazine Cover Generator</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<h2>Magazine Cover Generator</h2>
+
+<form method="post" action="">
+    {% csrf_token %}
+    
+    <label for="selectedImage">Select Cover Image:</label><br>
+    <select name="selectedImage">
+        <option value="a.jpeg">Cover A</option>
+        <option value="b.jpeg">Cover B</option>
+        <option value="c.jpeg">Cover C</option>
+    </select><br>
+    
+    <label for="backgroundColor">Background Color:</label><br>
+    <input type="color" name="backgroundColor" value="#ffffff"><br>
+    
+    <label for="titleText">Title Text:</label><br>
+    <input type="text" name="titleText" placeholder="Enter title"><br>
+    
+    <label for="fontSize">Font Size:</label><br>
+    <input type="number" name="fontSize" value="24"><br>
+    
+    <label for="fontColor">Font Color:</label><br>
+    <input type="color" name="fontColor" value="#000000"><br>
+    
+    <input type="submit" value="Generate Cover">
+</form> 
+
+{% if cover %}
+<div class="cover-preview" style="background-image: url('{% static cover.selectedImage %}'); color: {{ cover.fontColor }}; font-size: {{ cover.fontSize }}px; background-color: {{ cover.backgroundColor }};">
+    <div class="cover-content">
+        {{ cover.titleText }}
+    </div>
+</div>
+{% endif %}
+
+</body>
+</html>

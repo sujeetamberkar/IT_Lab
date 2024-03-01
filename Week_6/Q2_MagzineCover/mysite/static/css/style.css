@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.form-container {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cover-preview {
+    margin: 20px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.cover-content {
+    text-align: center;
+}
+
+/* Add additional styling as per your requirements */

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details Form</title>
+</head>
+<body>
+
+<h2>Enter Student Details</h2>
+
+<form id="studentForm" method="post" action="">
+    {% csrf_token %}
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" required><br>
+    
+    <label for="address">Address:</label><br>
+    <input type="text" id="address" name="address" required><br>
+    
+    <label for="contact">Contact Number:</label><br>
+    <input type="tel" id="contact" name="contact" required><br>
+    
+    <label for="email">Email ID:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    
+    <label for="english">Marks in English:</label><br>
+    <input type="number" id="english" name="english" required><br>
+    
+    <label for="physics">Marks in Physics:</label><br>
+    <input type="number" id="physics" name="physics" required><br>
+    
+    <label for="chemistry">Marks in Chemistry:</label><br>
+    <input type="number" id="chemistry" name="chemistry" required><br>
+    
+    <input type="submit" value="Submit">
+</form> 
+
+{% if details %}
+    <h3>Student Details:</h3>
+    <textarea id="details" rows="10" cols="50" readonly>{{ details }}</textarea><br>
+{% endif %}
+
+{% if totalPercentage %}
+    <label id="totalPercentage">{{ totalPercentage }}</label>
+{% endif %}
+</body>
+</html>

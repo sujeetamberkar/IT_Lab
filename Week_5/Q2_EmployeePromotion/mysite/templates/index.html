@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Promotion Eligibility Check</title>
+</head>
+<body>
+
+<h2>Check Promotion Eligibility</h2>
+
+<form id="promotionForm" method="post" action="">
+    {% csrf_token %}
+    <label for="employeeId">Select Employee ID:</label><br>
+    <select id="employeeId" name="employeeId">
+        <option value="emp001">EMP001</option>
+        <option value="emp002">EMP002</option>
+        <option value="emp003">EMP003</option>
+        <!-- Add more employee IDs as needed -->
+    </select><br>
+    
+    <label for="dateOfJoining">Date of Joining:</label><br>
+    <input type="date" id="dateOfJoining" name="dateOfJoining" required><br>
+    
+    <input type="submit" value="Am I Eligible for Promotion?">
+</form> 
+
+{% if eligibility_result is not None %}
+<label id="eligibilityResult">{{ eligibility_result }}</label>
+{% endif %}
+</body>
+</html>
