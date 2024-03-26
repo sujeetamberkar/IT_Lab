@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote on Book</title>
+</head>
+<body>
+    <h1>How is the book ASP.NET with c# by Vipul Prakashan?</h1>
+    <form action="{% url 'vote' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Vote</button>
+    </form>
+
+    {% if percentages %}
+        <h2>Results</h2>
+        <ul>
+            <li>Good: {{ percentages.good|floatformat:2 }}%</li>
+            <li>Satisfactory: {{ percentages.satisfactory|floatformat:2 }}%</li>
+            <li>Bad: {{ percentages.bad|floatformat:2 }}%</li>
+        </ul>
+    {% endif %}
+</body>
+</html>
