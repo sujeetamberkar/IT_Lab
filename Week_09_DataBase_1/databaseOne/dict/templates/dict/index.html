@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Directory</title>
+</head>
+<body>
+    <h1>Website Directory</h1>
+    {% for category in categories %}
+        <h2>{{ category.name }}</h2>
+        <p>Likes: {{ category.likes }}, Visits: {{ category.visits }}</p>
+        <h3>Pages:</h3>
+        <ul>
+            {% for page in category.page_set.all %}
+                <li>
+                    <a href="{{ page.url }}">{{ page.title }}</a> (Views: {{ page.views }})
+                </li>
+            {% empty %}
+                <li>No pages in this category yet.</li>
+            {% endfor %}
+        </ul>
+    {% empty %}
+        <p>No categories found.</p>
+    {% endfor %}
+</body>
+</html>

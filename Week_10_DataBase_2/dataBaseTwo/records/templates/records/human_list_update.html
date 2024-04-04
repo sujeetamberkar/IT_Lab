@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Human Records</title>
+</head>
+<body>
+    <h2>Update Human Records</h2>
+    <form method="post">
+        {% csrf_token %}
+        <select name="human_dropdown" onchange="this.form.submit()">
+            <option value="">Select a Human...</option>
+            {% for human in humans %}
+                <option value="{{ human.id }}" {% if selected_human.id == human.id %} selected {% endif %}>
+                    {{ human.first_name }}
+                </option>
+            {% endfor %}
+        </select>
+        <input type="hidden" name="select_human">
+    </form>
+
+    {% if selected_human %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="human_id" value="{{ selected_human.id }}">
+            <button type="submit" name="update_human">Update</button>
+            <button type="submit" name="delete_human">Delete</button>
+        </form>
+    {% endif %}
+</body>
+</html>

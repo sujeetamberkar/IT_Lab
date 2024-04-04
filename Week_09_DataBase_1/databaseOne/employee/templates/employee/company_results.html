@@ -1,0 +1,20 @@
+{% load employee_extras %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employees at {{ company_name }}</title>
+</head>
+<body>
+    <h2>Employees Working at {{ company_name }}</h2>
+    {% if employees %}
+        <ul>
+            {% for emp in employees %}
+                <li>{{ emp.person_name }} from {{ cities|get_item:emp.person_name }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No employees found for this company.</p>
+    {% endif %}
+    <a href="{% url 'employee:search_company' %}">Search another company</a>
+</body>
+</html>

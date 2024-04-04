@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Human</title>
+</head>
+<body>
+    <h2>Add New Human</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Human</button>
+    </form>
+    <a href="{% url 'records:human_list_update' %}">Back to Human List</a>
+</body>
+</html>
